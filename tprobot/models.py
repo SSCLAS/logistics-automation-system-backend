@@ -13,13 +13,13 @@ class product(models.Model):
     p_date = models.DateTimeField('생산날짜')
     p_origin = models.CharField(max_length=200)
     p_price = models.FloatField()
-    
+
     def __str__(self) -> str:
         return self.p_name
     
 class ware_house(models.Model):
     w_Width = models.DecimalField(max_digits= 10, decimal_places=2)
-    w_height = models.DecimalField(max_digits= 10, decimal_places=2)
+    w_height =  models.DecimalField(max_digits= 10, decimal_places=2)
     w_length = models.DecimalField(max_digits= 10, decimal_places=2) 
     w_status = models.BooleanField(default=False) 
 
