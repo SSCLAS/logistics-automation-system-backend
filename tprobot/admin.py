@@ -1,17 +1,17 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import robot
-from .models import product
-from .models import deliver_order
-from .models import stock_order
-from .models import ware_house
+from .models import Robot
+from .models import Product
+from .models import Deliver_order
+from .models import Stock_order
+from .models import Ware_house
 
 
 
 
-admin.site.register(robot)
-admin.site.register(product)
-admin.site.register(deliver_order)
-admin.site.register(stock_order)
-admin.site.register(ware_house)
+admin.site.register(Robot)
+admin.site.register(Product)
+admin.site.register(Deliver_order)
+admin.site.register(Stock_order)
+admin.site.register(Ware_house)
