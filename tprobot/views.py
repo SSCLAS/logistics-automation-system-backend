@@ -5,8 +5,13 @@ from rest_framework.views import APIView
 
 from .models import Robot, Product, Ware_house, Deliver_order, Stock_order
 from .serializers import RobotSerializer, ProductSerializer, Ware_houseSerializer, Deliver_orderSerializer, Stock_orderSerializer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.generics import CreateAPIView
 
-
+class DeliverCreateView(CreateAPIView):
+    queryset = Deliver_order.objects.all()
+    serializer_class = Deliver_orderSerializer
 
 class RobotViewSet(viewsets.ModelViewSet):
     queryset = Robot.objects.all()

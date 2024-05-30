@@ -11,4 +11,5 @@ router.register(r'Stock_order', views.Stock_orderViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
+    path('Ware_house/<int:pk>/deliver', views.DeliverCreateView.as_view()),
 ]
